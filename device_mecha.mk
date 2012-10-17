@@ -24,6 +24,13 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/init.mecha.rc:root/init.mecha.rc \
     device/htc/mecha/ueventd.mecha.rc:root/ueventd.mecha.rc
 
+PRODUCT_COPY_FILES += \
+    device/htc/mecha/recovery/root/sbin/choice_fn:recovery/root/sbin/choice_fn \
+    device/htc/mecha/recovery/root/sbin/detect_key:recovery/root/sbin/detect_key \
+    device/htc/mecha/recovery/root/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
+    device/htc/mecha/recovery/root/sbin/power_test:recovery/root/sbin/power_test \
+    device/htc/mecha/recovery/root/sbin/htcbatt:recovery/root/sbin/htcbatt
+
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/mecha/mecha-vendor.mk)
 
